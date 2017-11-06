@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bare - Start Bootstrap Template</title>
+    <title>emoji-aes</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,25 +33,19 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a class="navbar-brand" href="#">emoji-aes</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home
+              <a class="nav-link" href="#encrypt">Encrypt
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#decrypt">Decrypt</a>
             </li>
           </ul>
         </div>
@@ -62,12 +56,46 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
-          <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
-          <ul class="list-unstyled">
-            <li>Bootstrap 4.0.0-beta</li>
-            <li>jQuery 3.2.1</li>
-          </ul>
+          <h1 class="mt-5">&#x1F512; <strong>emoji-aes</strong>: Encrypt messages with emojis</h1>
+          <p class="lead">emoji-aes encrypts string data with the symmetric AES encryption cipher (using <a href="https://github.com/brix/crypto-js">crypto-js</a>), and then replaces the Base64 output with emojis.</p>
+        </div>
+
+        <div id="encrypt" class="col-lg-12 text-center">
+          <hr>
+          <h3 class="mt-5">Encrypt</h3>
+          <br>
+          <div class="form-group">
+            <p>
+              <label for="message-for-encryption">Message</label>
+              <textarea id="message-for-encryption" class="form-control" rows="4" cols="50"></textarea>
+            </p>
+            <p>
+              <label for="key-for-encryption">Key</label>
+              <input id="key-for-encryption" type="password" class="form-control">
+            </p>
+            <p>
+              <button id="encrypt-button" class="btn-primary">Encrypt</button>
+            </p>
+          </div>
+        </div>
+
+        <div id="decrypt" class="col-lg-12 text-center">
+          <hr>
+          <h3 class="mt-5">Decrypt</h3>
+          <br>
+          <div class="form-group">
+            <p>
+              <label for="message-for-decryption">Message</label>
+              <textarea id="message-for-decryption" class="form-control" rows="4" cols="50"></textarea>
+            </p>
+            <p>
+              <label for="key-for-decryption">Key</label>
+              <input id="key-for-decryption" type="password" class="form-control">
+            </p>
+            <p>
+              <button id="decrypt-button" class="btn-primary">Decrypt</button>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -75,6 +103,10 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="vendor/crypto-js-3.1.9-1/crypto-js.js"></script>
+    <script src="js/emoji-aes.js"></script>
 
   </body>
 
