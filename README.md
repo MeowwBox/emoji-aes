@@ -10,8 +10,8 @@ emoji-aes does not collect any user data, and is capable of running locally.
 
 #### License
 
-Copyright (c) 2013-2017 Blackrock Digital LLC
+Copyright (c) 2013-2018 Blackrock Digital LLC
 
-Modifications 2017 Aaron Horler 
+Modifications 2017-2018 Aaron Horler 
 
 Licensed under the [MIT License](https://github.com/aghorler/emoji-aes/blob/master/LICENSE).
